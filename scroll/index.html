@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luke Byrne x Gravity Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Geist+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: confident, plain-spoken, a trader's résumé told as a story
+   IDEA: an OTC block-trade confirmation: clean ledger lines, one big number
+   PICTURE: portrait on the dark opening band beside the 8–12 mln USD figure
+   COLOUR and TYPE: Gravity Team's off-white, near-black, sand-gold, deep purple keywords; Inter + Geist Mono
+   LAYOUT: full-width bands, single column on phones, two columns from 760px */
+:root{color-scheme:light dark;
+  --bg:light-dark(#fffff6,#05080a);--ink:light-dark(#000304,#fffff6);--soft:light-dark(#474444,#c9c9c0);
+  --line:light-dark(rgba(0,3,4,.12),rgba(255,255,246,.14));--gold:#d8b782;--gold-deep:light-dark(#8f6c38,#d8b782);
+  --key:light-dark(#3500a0,#b79cff);--night:#000304;--day:#fffff6}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rise{animation:none!important;opacity:1!important;transform:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:clip}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1080px;margin:0 auto}
+.band{padding:clamp(48px,7vw,96px) max(5vw,20px);border-top:1px solid var(--line)}
+.mono{font-family:"Geist Mono",ui-monospace,Menlo,monospace}
+.num{font-family:"Geist Mono",ui-monospace,monospace;font-size:13px;color:var(--gold-deep);font-weight:700;margin:0 0 6px}
+h2{font-size:clamp(28px,4.4vw,42px);line-height:1.08;margin:0 0 22px;text-wrap:balance;letter-spacing:-.01em}
+h3{font-size:20px;margin:0 0 10px;line-height:1.25}
+p{margin:0 0 14px;max-width:68ch}
+b.k{color:var(--key);font-weight:700}
+ul.list{list-style:none;margin:0;padding:0;max-width:68ch}
+ul.list li{padding:12px 0 12px 22px;border-bottom:1px solid var(--line);position:relative}
+ul.list li:last-child{border-bottom:0}
+ul.list li::before{content:"";position:absolute;left:0;top:23px;width:8px;height:2px;background:var(--gold)}
+.two{display:grid;gap:clamp(28px,5vw,64px);grid-template-columns:minmax(0,1fr)}
+@media(min-width:760px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+/* opening band */
+.hero{background:var(--night);color:var(--day);padding:clamp(40px,7vw,96px) max(5vw,20px) clamp(48px,7vw,88px)}
+.hero .grid{display:grid;gap:36px;align-items:center;grid-template-columns:minmax(0,1fr)}
+@media(min-width:760px){.hero .grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}}
+.tag{font-family:"Geist Mono",monospace;font-size:12px;color:var(--gold);font-weight:700;margin:0 0 18px}
+.tag::after{content:"";display:block;width:40px;height:3px;background:var(--gold);margin-top:10px}
+.hero h1{font-size:clamp(48px,9vw,96px);line-height:1;margin:0 0 14px;letter-spacing:-.025em;font-weight:800}
+.hero .sub{color:var(--gold);font-size:clamp(18px,2.4vw,22px);margin:0 0 18px}
+.hero .lede{color:#c9c9c0;font-size:17px;max-width:46ch}
+.portrait{position:relative;justify-self:center;width:min(78vw,320px)}
+.portrait img{border-radius:50%;aspect-ratio:1;object-fit:cover;width:100%;box-shadow:0 0 0 6px rgba(216,183,130,.18),0 30px 60px rgba(0,0,0,.5)}
+.chip{position:absolute;left:-6%;bottom:2%;background:var(--day);color:var(--night);border-radius:14px;padding:12px 16px;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.chip strong{display:block;font-size:24px;line-height:1.1;color:#3500a0;font-family:"Geist Mono",monospace}
+.chip span{font-size:12.5px;color:#474444}
+.jump{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:30px;font-size:14px}
+.jump a{color:#fffff6;opacity:.75;text-decoration:none;border-bottom:1px solid rgba(216,183,130,.5);padding:6px 0}
+.jump a:hover,.jump a:focus-visible{opacity:1;outline:none;border-color:var(--gold)}
+
+/* timeline */
+.tl{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:0;grid-template-columns:minmax(0,1fr)}
+.tl li{position:relative;padding:0 0 26px 30px;border-left:2px solid var(--gold);margin-left:6px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-8px;top:3px;width:14px;height:14px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--bg)}
+.tl .yr{font-family:"Geist Mono",monospace;font-weight:700;color:var(--gold-deep);font-size:14px}
+.tl .co{font-weight:700;font-size:19px;margin:2px 0}
+.tl .role{color:var(--soft);font-size:15px}
+@media(min-width:860px){
+  .tl{grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--gold);margin-top:40px}
+  .tl li{border-left:0;margin-left:0;padding:26px 16px 0 0}
+  .tl li::before{left:0;top:-9px}
+}
+
+/* figures */
+.logo-card{background:#fff;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.stat{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin:26px 0}
+.stat strong{display:block;font-family:"Geist Mono",monospace;font-size:clamp(40px,8vw,64px);line-height:1;color:var(--key);letter-spacing:-.02em}
+.stat span{color:var(--soft)}
+.award{display:flex;gap:16px;align-items:center;margin-top:22px;flex-wrap:wrap}
+.award .logo-card{width:150px;padding:10px}
+.award p{margin:0}
+.tldr{font-size:13px;font-weight:700;font-style:italic;color:var(--key);margin:0 0 6px}
+.lead-b{font-weight:700;font-size:clamp(18px,2.4vw,22px);line-height:1.4;margin:0}
+
+/* special */
+.cards{display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:600px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;background:light-dark(#fff,#0b1013)}
+.card p{margin:0}
+
+/* clients */
+.logos{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:10px}
+@media(min-width:700px){.logos{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.logos figure{margin:0;text-align:center}
+.logos .logo-card{height:84px;padding:14px}
+.logos img{max-height:56px;max-width:100%;width:auto;object-fit:contain}
+.logos figcaption{font-size:13px;color:var(--soft);margin-top:7px;line-height:1.3}
+
+/* close */
+.close{background:var(--night);color:var(--day);border-top:0}
+.close p{font-size:clamp(18px,2.2vw,21px);color:#e6e6dc;max-width:60ch}
+.close .big{font-size:clamp(24px,3.4vw,34px);line-height:1.25;color:var(--day);font-weight:400;max-width:30ch;margin-top:28px}
+.close .big b{color:var(--gold)}
+.foot{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,246,.15);font-size:14px}
+.foot a{color:var(--gold);text-decoration:none;padding:10px 0}
+.foot a:hover,.foot a:focus-visible{text-decoration:underline;outline:none}
+.foot span{color:#8c8c86;padding:10px 0;margin-left:auto}
+@media(max-width:600px){.foot span{margin-left:0}}
+
+.rise{animation:rise .7s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap grid">
+    <div class="rise">
+      <p class="tag">GRAVITY TEAM</p>
+      <h1>Luke Byrne</h1>
+      <p class="sub">An intro for Gravity Team</p>
+      <p class="lede">For your consideration to be involved in your future OTC trading, operations, and all things related.</p>
+      <nav class="jump" aria-label="Sections">
+        <a href="#who">Who I am</a><a href="#history">History</a><a href="#tradfi">TradFi</a><a href="#otc">What I did</a><a href="#clients">Clients</a><a href="#next">What I'm looking for</a>
+      </nav>
+    </div>
+    <div class="portrait rise" style="animation-delay:.12s">
+      <img src="luke.webp" alt="Luke Byrne" width="640" height="640">    </div>
+  </div>
+</header>
+
+<section class="band" id="who">
+  <div class="wrap">
+    <p class="num">02</p>
+    <h2>Who I am</h2>
+    <ul class="list">
+      <li>I’m a finance guy, turned entrepreneur. I just finished a 5 year earn out after the company I founded was bought.</li>
+      <li>I’m now free and hungry for my next opportunity.</li>
+      <li>I’ve had 17 years on and off exposure in TradFi. The Gravity relevant part: I was one of the top performing Sales Traders in Asia.</li>
+      <li>I’ve lived in Asia for 16 years. From Feb 2027 I’ll be full time based in Bangkok.</li>
+      <li>How I know Gravity Team: I’ve known Martins &amp; Alexis socially for about 5 years.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="history">
+  <div class="wrap">
+    <p class="num">03</p>
+    <h2>My history</h2>
+    <ol class="tl">
+      <li><div class="yr">2008–2010</div><div class="co">ICAP</div><div class="role">Sales trader, London</div></li>
+      <li><div class="yr">2010–2014</div><div class="co">CLSA</div><div class="role">Sales trader, Hong Kong</div></li>
+      <li><div class="yr">2014–2021</div><div class="co">Jobable</div><div class="role">Co-founder, owner &amp; COO, Hong Kong</div></li>
+      <li><div class="yr">2021–2026</div><div class="co">Willis Towers Watson</div><div class="role">Management consultant (earn-out), Hong Kong</div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="jobable">
+  <div class="wrap two">
+    <div>
+      <p class="num">04</p>
+      <p class="tldr">*TLDR keywords highlighted</p>
+      <h2>Jobable</h2>
+      <p class="mono" style="color:var(--gold-deep);font-size:14px">Acquired by Willis Towers Watson in 2021</p>
+      <img src="jobable-wtw.webp" alt="Jobable and Willis Towers Watson" width="800" height="135" style="border-radius:10px;margin-top:18px">
+    </div>
+    <ul class="list">
+      <li>Jobable was a human capital analytics and software company, specialising in AI and data science.</li>
+      <li>I <b class="k">co-founded</b> the business, grew the team and <b class="k">grew revenue</b>.</li>
+      <li>We executed several funding rounds to <b class="k">Series A</b>.</li>
+      <li>We sold via <b class="k">acquisition</b> to Willis Towers Watson in 2021.</li>
+      <li>I have just finished my 5 years earn out retainer.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="tradfi">
+  <div class="wrap two">
+    <div>
+      <p class="num">05</p>
+      <p class="tldr">*TLDR keywords highlighted</p>
+      <h2>My TradFi experience that’s relevant to <b class="k">Gravity Team</b></h2>
+      <h3>My role: <b class="k">Sales Trader</b></h3>
+      <p style="color:var(--soft)">Director, Asian Equity Trading and Execution Services</p>
+      <div class="logo-card" style="max-width:300px;margin-top:18px"><img src="citic-clsa.webp" alt="CITIC Securities and CLSA" width="400" height="80"></div>
+    </div>
+    <div class="stat" style="align-self:center">
+      <p class="lead-b">Responsible for trading commission of <b class="k">8–12 mln</b> USD per annum.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="team">
+  <div class="wrap">
+    <p class="num">06</p>
+    <p class="tldr">*TLDR keywords highlighted</p>
+    <h2>Who we were: the team</h2>
+    <ul class="list">
+      <li>A unique <b class="k">OTC trading</b> desk specialised in institutions moving large blocks with minimal information leakage and maximum results.</li>
+      <li>We were the first pure agency block trading service in the <b class="k">Asia Pacific</b> region.</li>
+      <li>3 person team, segregated from the main Asia trading floor.</li>
+    </ul>
+    <div class="award">
+      <div class="logo-card"><img src="asianinvestor.webp" alt="AsianInvestor" width="800" height="600"></div>
+      <p>Ranked Best Service for Agency Block Trades by AsianInvestor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="otc">
+  <div class="wrap two">
+    <div>
+      <p class="num">07</p>
+      <p class="tldr">*TLDR keywords highlighted</p>
+      <h2>What I did: OTC</h2>
+      <ul class="list">
+        <li><b class="k">Negotiated fair price</b> block trades with pre-agreed <b class="k">size and price</b></li>
+        <li>Led the daily morning meeting <b class="k">flow update</b> across the region</li>
+        <li>Supervised the <b class="k">zero-touch</b> dark pool</li>
+        <li>Identified <b class="k">arbitrage</b> opportunities</li>
+        <li>IPO <b class="k">book building</b></li>
+        <li>Share issuance book building</li>
+        <li>Implemented <b class="k">trading strategies</b></li>
+        <li><b class="k">Facilitation</b> trading when necessary or profitable</li>
+        <li>Covered <b class="k">market open hours</b> from first market New Zealand to last market India</li>
+      </ul>
+    </div>
+    <div>
+      <p class="num">08</p>
+      <p class="tldr">*TLDR keywords highlighted</p>
+      <h2>What I did: operations</h2>
+      <ul class="list">
+        <li>Oversaw <b class="k">trade settlement</b> with middle and back office teams</li>
+        <li>Managed client accounts and personal relationships</li>
+        <li>Client <b class="k">onboarding</b></li>
+        <li>Client <b class="k">KYC</b></li>
+        <li><b class="k">Educated</b> clients on the trade management systems and algo trading tools</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="special">
+  <div class="wrap">
+    <p class="num">09</p>
+    <p class="tldr">*TLDR keywords highlighted</p>
+    <h2>Why we were special</h2>
+    <div class="cards">
+      <div class="card"><p><b class="k">Discretion</b> was key</p></div>
+      <div class="card"><p>We carefully handled notoriously <b class="k">difficult clients</b></p></div>
+      <div class="card"><p>Had a reputation for <b class="k">fair negotiation</b></p></div>
+      <div class="card"><p>Able to improve existing <b class="k">liquidity</b></p></div>
+      <div class="card"><p>Efficient and calm <b class="k">execution</b></p></div>
+      <div class="card"><p>Clear <b class="k">communication</b> and <b class="k">transparency</b>, even when things don't go according to plan</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="clients">
+  <div class="wrap">
+    <p class="num">10</p>
+    <h2>Who we did it with</h2>
+    <div class="logos" id="logos"><figure><div class="logo-card"><img src="logo-blackrock.webp" alt="BlackRock"></div><figcaption>BlackRock</figcaption></figure><figure><div class="logo-card"><img src="logo-tt.webp" alt="TT International"></div><figcaption>TT International</figcaption></figure><figure><div class="logo-card"><img src="logo-fidelity.webp" alt="Fidelity"></div><figcaption>Fidelity</figcaption></figure><figure><div class="logo-card"><img src="logo-statestreet.webp" alt="State Street"></div><figcaption>State Street</figcaption></figure><figure><div class="logo-card"><img src="logo-tudor.webp" alt="Tudor"></div><figcaption>Tudor</figcaption></figure><figure><div class="logo-card"><img src="logo-troweprice.webp" alt="T. Rowe Price"></div><figcaption>T. Rowe Price</figcaption></figure><figure><div class="logo-card"><img src="logo-aberdeen.webp" alt="Aberdeen"></div><figcaption>Aberdeen</figcaption></figure><figure><div class="logo-card"><img src="logo-franklin.webp" alt="Franklin Templeton"></div><figcaption>Franklin Templeton</figcaption></figure><figure><div class="logo-card"><img src="logo-eastspring.webp" alt="Eastspring"></div><figcaption>Eastspring</figcaption></figure><figure><div class="logo-card"><img src="logo-invesco.webp" alt="Invesco"></div><figcaption>Invesco</figcaption></figure><figure><div class="logo-card"><img src="logo-pimco.webp" alt="PIMCO"></div><figcaption>PIMCO</figcaption></figure><figure><div class="logo-card"><img src="logo-schroders.webp" alt="Schroders"></div><figcaption>Schroders</figcaption></figure><figure><div class="logo-card"><img src="logo-skagen.webp" alt="SKAGEN"></div><figcaption>SKAGEN</figcaption></figure><figure><div class="logo-card"><img src="logo-bailliegifford.webp" alt="Baillie Gifford"></div><figcaption>Baillie Gifford</figcaption></figure><figure><div class="logo-card"><img src="logo-susquehanna.webp" alt="Susquehanna"></div><figcaption>Susquehanna</figcaption></figure><figure><div class="logo-card"><img src="logo-point72.webp" alt="Point72"></div><figcaption>Point72</figcaption></figure><figure><div class="logo-card"><img src="logo-mirae.webp" alt="Mirae Asset"></div><figcaption>Mirae Asset</figcaption></figure><figure><div class="logo-card"><img src="logo-york.webp" alt="York Capital"></div><figcaption>York Capital</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="band close" id="next">
+  <div class="wrap">
+    <p class="num" style="color:var(--gold)">11</p>
+    <h2>What I'm looking for</h2>
+    <p>My next big opportunity. I’ve already built and sold my own company at a modest level. For the next chapter in my life, I would love to join a highly successful existing business, where I can be a part of mega growth.</p>
+    <p>I will go anywhere and meet anyone necessary.</p>
+    <p class="big">I’m not looking for an ordinary salary job, I’m looking to be part of something with unlimited upside.</p>
+    <div class="foot">
+      <a href="https://lukewilliambyrne.github.io/luke-x-gravity/">View as slides</a>
+      <a href="https://docs.google.com/presentation/d/1uaawZRVzDxNY0bMvp9rsvBQyOKAsXwFLxAEOlPbtKvw/export/pdf">Download PDF</a>
+      <span class="mono">LUKE BYRNE · GRAVITY TEAM</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
